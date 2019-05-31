@@ -1,0 +1,37 @@
+<div class="one">
+	<h1>Stupid Coaching</h1>
+	<div class="containerz">
+		<div class="side-box">
+		</div>
+		<div class="box" id="white">
+			<p><%= params[:question] %></p>
+			<p>-You</p>	
+		</div>
+	</div>
+
+		<br>
+
+	<div class="containerz">
+		<div class="side-box">
+		</div>
+		<div class="box">
+			<% if params[:question] == 'I am going to work'%>
+				<p><strong>Great!</strong></p>
+				<p>-Your Coach</p>
+			<% elsif params[:question][-1] == '?'%>
+				<p><strong>Silly question, get dressed and go to work!</strong></p>
+				<p>-Your Coach</p>
+			<% else %>
+				<p><strong>I don't care, get dressed and go to work!</strong></p>
+				<p>-Your Coach</p>
+			<% end %>
+		</div>
+	</div>
+
+	<br>
+
+	<div id="ask-another">
+		<%= link_to "Ask another question", ask_path %>
+	</div>
+</div>
+
